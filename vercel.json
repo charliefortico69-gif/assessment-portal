@@ -4,8 +4,8 @@
   "outputDirectory": "frontend/build",
   "installCommand": "cd frontend && npm install",
   "functions": {
-    "backend/server.js": {
-      "runtime": "nodejs18.x"
+    "backend/*.js": {
+      "runtime": "@vercel/node@3.0.0"
     }
   },
   "routes": [
