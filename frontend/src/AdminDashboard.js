@@ -13,16 +13,6 @@ export default function AdminDashboard() {
   const [users, setUsers] = useState([]);
   const [marks, setMarks] = useState([]);
   const [statistics, setStatistics] = useState({});
-  
-  const [userForm, setUserForm] = useState({
-    email: "",
-    password: "",
-    role: "",
-    name: "",
-    assignedCourse: ""
-  });
-  
-  const [editingUser, setEditingUser] = useState(null);
 
   useEffect(() => {
     fetchUsers();
@@ -38,6 +28,14 @@ export default function AdminDashboard() {
     }
     return { Authorization: `Bearer ${token}` };
   };
+
+  const [userForm, setUserForm] = useState({
+    email: "",
+    password: "",
+    role: "",
+    name: "",
+    assignedCourse: ""
+  });
 
   const fetchUsers = async () => {
     try {
